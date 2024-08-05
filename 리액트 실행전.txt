@@ -1,0 +1,21 @@
+1. cmd 창으로 노드 버전확인
+    node -v
+    npm -v
+
+2. 바탕화면에 'react'라는 폴더 생성
+
+3. 경로 복사 해놓기
+    C:\Users\j2000\OneDrive\Desktop\React
+
+4. cmd로 와서 cd + 띄어쓰기 + 컨트롤 v
+
+5. npx create-react-app project01
+
+5-1) on ~ proceed? Y 입력
+5-2) 오류 시 해결법
+    npm uninstall -g create-react-app
+    npm install -g create-react-app
+    npx create-react-app project01
+
+6. cmd 창으로 입력했을 경우 : code . + enter
+    vs터미널에 입력했을 경우 : 그대로 있으면 됨
