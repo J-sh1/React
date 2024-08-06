@@ -18,25 +18,39 @@ function AppExample() {
     //          조건 2) 6월~8월 : 여름
     //          조건 2) 9월~11월 : 가을
     //          조건 2) 12월~2월 : 겨울
-    let summer
+    let season = ''
     if(month >= 3 && month <= 5) {
-        summer = '봄'
+        season = '봄'
     } else if (month >= 6 && month <= 8) {
-        summer = '여름'
+        season = '여름'
     } else if (month >= 9 && month <= 11) {
-        summer = '가을'
+        season = '가을'
     } else {
-        summer = '봄'
+        season = '겨울'
     }
+
+    /*
+    if (parseInt(month / 3) == 1) {
+        season = '봄'
+    }else if (parseInt(month / 3) == 2) {
+        season = '여름'
+    } else if (parseInt(month / 3) == 3) {
+        season = '가을'
+    } else {
+        let season = '겨울'
+    }
+    */
+
+
     // STEP 4. 결과창을 구성
     // 오늘 날짜
     // ooo님 지금은 여름입니다. 좋은하루 보내세요!
 
     return(
         <div>
-            <h1>2024.08.05</h1>
+            <h1>{date}</h1>
             <hr/>
-            <h4>{name}님 지금은 {summer}입니다. 좋은하루 보내세요!</h4>
+            <h4>{name}님 지금은 {season}입니다. 좋은하루 보내세요!</h4>
         </div>
     )
 }
