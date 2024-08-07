@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 
+// ============================= [STEP 1. state 관리] =========================================
+
 // 1. useState 개념 + React Event 개념
 // import App from './example/Ex01'
 
 // 2. useState 좋아요 실습 (+react에서 사진 가져오기)
-import App from './example/Ex02'
+// import App from './example/Ex02'
+
+// 3. useState 랜덤게임 실습
+// import App from './example/Ex03'
+
+// 4. useState 최종실습 : 주사위 게임 (+bootstrap 사용법)
+import App from './example/Ex04'
+
+
+// ============================= [STEP 2. ?] =========================================
 
 import reportWebVitals from './reportWebVitals';
 

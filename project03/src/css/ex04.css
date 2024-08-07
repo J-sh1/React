@@ -1,0 +1,32 @@
+.box {
+    padding: 5% 0px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    flex-direction: column;
+  }
+  
+  .board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .board-area {
+    margin: 5%;
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .board-area h4 {
+    margin-top: 10%;
+  }
+  
+  .board-area div {
+    border: 1px solid black;
+  }
+  

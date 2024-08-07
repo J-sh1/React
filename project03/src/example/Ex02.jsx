@@ -1,6 +1,4 @@
-import React from 'react'
-import { useState } from 'react'
-import img from '../img/img.gif'
+import React, { useState } from 'react'
 
 const Ex02 = () => {
 
@@ -27,15 +25,15 @@ const Ex02 = () => {
     // hint) emoji, likeNum 이라는 state를 사용할 예정 
     
 
-    const [likeNum, setHandleLike] = useState(0)
-    const [like, setLike] = useState('🤍')
+    const [likeNum, setLikeNum] = useState(0)
+    const [emoji, setLike] = useState('🤍')
 
-    const emoji = () => {
+    const handleLike = () => {
         if(likeNum < 1) {
-            setHandleLike(likeNum + 1)
+            setLikeNum(likeNum + 1)
             setLike('💖')
         } else {
-            setHandleLike(likeNum - 1)
+            setLikeNum(likeNum - 1)
             setLike('🤍')
         }
     }
@@ -46,7 +44,7 @@ const Ex02 = () => {
         {/* <img width='300px' src = {img}></img> */}
         <img width = '300px' src="/img/img.gif" />
         <p>
-            <span onClick={emoji}>{like}</span>
+            <span onClick={handleLike}>{emoji}</span>
             <span>좋아요 {likeNum}개</span>
         </p>
     </div>
