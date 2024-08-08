@@ -15,10 +15,16 @@ import './index.css';
 // import App from './example/Ex03'
 
 // 4. useState 최종실습 : 주사위 게임 (+bootstrap 사용법)
-import App from './example/Ex04'
+// import App from './example/Ex04'
 
 
-// ============================= [STEP 2. ?] =========================================
+// ============================= [STEP 2. 배열함수를 이용한 렌더링] =========================================
+
+// 5. map 함수, filter함수
+// import App from './example/Ex05'
+
+// 6. map 함수 실습
+import App from './example/Ex06'
 
 import reportWebVitals from './reportWebVitals';
 

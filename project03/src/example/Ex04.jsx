@@ -23,12 +23,15 @@ const Ex04 = () => {
 
     const [myDice, setmyDice] = useState(1)
     const [comDice, setComDice] = useState(1)
+    const makeRandom = () => {
+        return parseInt(Math.random() * 6) + 1
+    }
 
     /** 랜덤 주사위 뽑기 함수 */
     const throwDice = (e) => {
-        console.log(parseInt(Math.random() * 6) + 1)
-        setmyDice(parseInt(Math.random() * 6) + 1)
-        setComDice(parseInt(Math.random() * 6) + 1)
+        // console.log(parseInt(Math.random() * 6) + 1)
+        setmyDice(makeRandom)
+        setComDice(makeRandom)
     }
     /** 주사위 리셋 함수 */
     const resetDice = (e) => {
