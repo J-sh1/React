@@ -13,7 +13,9 @@ const Ex06 = () => {
     // let content = list.map(item => <a>{item.content}</a>)
     // let imgSrc = list.map(item => <a>{item.imgSrc}</a>)
 
-    let test = data.result.map(item => <Ex06Card sns = {item.SNS} 
+    let test = data.result.map(item => <Ex06Card 
+                                    key = {item.title}
+                                    sns = {item.SNS} 
                                     title = {item.title}
                                     birthYear = {item.birthYear} 
                                     content = {item.content}
@@ -25,7 +27,9 @@ const Ex06 = () => {
     // console.log(data.result[0].SNS)
     let newResult = data.result.filter(item => item.birthYear <= 1994)
     
-    let newResult2 = newResult.map(item =><Ex06Card sns = {item.SNS} 
+    let newResult2 = newResult.map(item =><Ex06Card 
+                                    key = {item.title}
+                                    sns = {item.SNS} 
                                     title = {item.title}
                                     birthYear = {item.birthYear} 
                                     content = {item.content}

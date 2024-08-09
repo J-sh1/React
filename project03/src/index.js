@@ -20,11 +20,22 @@ import './index.css';
 
 // ============================= [STEP 2. 배열함수를 이용한 렌더링] =========================================
 
-// 5. map 함수, filter함수
+// 5. map 함수, filter 함수
 // import App from './example/Ex05'
 
-// 6. map 함수 실습
-import App from './example/Ex06'
+// 6. map 함수 실습, filter 함수 실습
+// import App from './example/Ex06'
+
+// ============================= [STEP 3. context API (전역적 state사용)] =========================================
+
+// 7. 양방향 데이터 전달
+// import App from './example/Ex07'
+
+// 8. Context API 사용
+// import App from './example/Ex08'
+
+// 9. Context API 실습 (다크모드)
+import App from './example/Ex09'
 
 import reportWebVitals from './reportWebVitals';
 
