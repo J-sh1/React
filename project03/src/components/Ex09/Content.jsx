@@ -7,8 +7,8 @@ const Content = () => {
     <div 
         className="content"
         style={{
-            backgroundColor : isDark == true ? 'white' : 'black',
-            color : isDark == true ? 'black' : 'white'
+            backgroundColor : isDark ? 'white' : 'black',
+            color : isDark  ? 'black' : 'white'
         }}>
         <h3>집에가고 싶어요😥</h3>
     </div>

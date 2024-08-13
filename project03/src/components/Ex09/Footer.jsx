@@ -9,17 +9,16 @@ const Footer = () => {
     <div 
         className="footer"
         style={{
-            backgroundColor : isDark == true ? "lightgray" : "black"
+            backgroundColor : isDark ? "lightgray" : "black"
         }}> 
             <button className='button'
             style={{
-                backgroundColor : isDark == true ? "black" : "white",
-                color : isDark == true ? "white" : "black",
+                backgroundColor : isDark ? "black" : "white",
+                color : isDark ? "white" : "black",
                 fontSize : '15px',
                 fontWeight : 'bold'
             }}
-            onClick={isDark == true ? () => setIsDark(false) : 
-                () => setIsDark(true)
+            onClick={() => setIsDark(!isDark) 
             }>
                {isDark == true ? "다크모드" : "라이트모드"}
             </button>

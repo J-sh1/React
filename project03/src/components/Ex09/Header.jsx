@@ -8,8 +8,8 @@ const Header = () => {
     <div 
     className="header"
     style={{
-        backgroundColor : isDark == true ? 'skyblue' : 'black',
-        color : isDark == true ? 'black' : 'white'
+        backgroundColor : isDark ? 'skyblue' : 'black',
+        color : isDark ? 'black' : 'white'
     }}>
         <h1>인공지능사관학교</h1>
     </div>

@@ -35,7 +35,10 @@ import './index.css';
 // import App from './example/Ex08'
 
 // 9. Context API 실습 (다크모드)
-import App from './example/Ex09'
+// import App from './example/Ex09'
+
+// Mini Project - TodoList 구현 (state, context, component, props, map, event)
+import App from './example/Ex10'
 
 import reportWebVitals from './reportWebVitals';
 
