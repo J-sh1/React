@@ -37,8 +37,23 @@ import './index.css';
 // 9. Context API 실습 (다크모드)
 // import App from './example/Ex09'
 
-// Mini Project - TodoList 구현 (state, context, component, props, map, event)
-import App from './example/Ex10'
+// 10. Mini Project - TodoList 구현 (state, context, component, props, map, event)
+// import App from './example/Ex10'
+
+
+// ============================= [STEP 4. React에서 사용하는 DOM, useRef] =========================================
+// 11. useRef란?
+// import App from './example/Ex11'
+
+// 12. useRef 예제 (스타일 변경)
+// import App from './example/Ex12'
+
+// 13. useRef 예제2 (속성변경)
+// import App from './example/Ex13'
+
+// ============================= [STEP 5. LifeCycle] =========================================
+// 14. React Class Component
+import App from './example/Ex14'
 
 import reportWebVitals from './reportWebVitals';
 

@@ -10,7 +10,7 @@ const Ex10 = () => {
         {
             text : '물 마시기',
             num : 1,
-            completed : true
+            completed : false
         },
         {
             text : '술 마시기',
@@ -49,10 +49,15 @@ const Ex10 = () => {
 
     /** 사용자가 선택한 todo 데이터를 완료했을 때 체크 & 밑줄 */
     const handleTodoToggle = (num) => {
-    console.log('handleTodoToggle', num)
-    const res= todos.find(item => item.num == num)
-    console.log(res)
-  
+        console.log('handleTodoToggle', num)
+        const targetTodo = todos.find(item => item.num == num)
+        console.log(targetTodo)
+
+        if(targetTodo){
+            targetTodo.completed = !targetTodo.completed
+            setTodos([...todos])
+        }
+
     }
 
   return (

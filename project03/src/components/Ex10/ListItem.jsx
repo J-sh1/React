@@ -7,9 +7,10 @@ const ListItem = ({item}) => {
   return (
     <div className='list-item'>
       <li>
-        <input type="checkbox" onChange={() => {handleTodoToggle(item.num)}} value={item.completed}/>
+        <input type="checkbox" checked = {item.completed} 
+                onChange={() => {handleTodoToggle(item.num)}}/>
         <label style={{
-          textDecoration : item.num == true ? 'line-through' : 'none'
+          textDecoration : item.completed ? 'line-through' : 'none'
         }}>
           <span className='todo-text'>
             {item.text}
