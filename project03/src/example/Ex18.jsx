@@ -40,7 +40,7 @@ const Ex18 = () => {
     }
 
     const getData = () => {
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=08ff855ec12eff8a1ca99e87cd89eff7`
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`
         axios.get(url)
         .then(res =>{
             // console.log(res.data.clouds.all)
