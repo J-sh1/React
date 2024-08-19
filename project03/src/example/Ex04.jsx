@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button } from 'react-bootstrap'
 import Board from '../components/Board'
@@ -23,6 +23,12 @@ const Ex04 = () => {
 
     const [myDice, setmyDice] = useState(1)
     const [comDice, setComDice] = useState(1)
+
+    const [result, setResult] = useState('시작전')
+    // myDics나 comDice로 변화를 감지할 경우, 적은 확률이지만 두개가 두판다 같은 값이
+    // 나올수도 있음 => 그럴 때는 감지 X
+    const [round, setRound] = useState(1)
+
     const makeRandom = () => {
         return parseInt(Math.random() * 6) + 1
     }
@@ -32,12 +38,27 @@ const Ex04 = () => {
         // console.log(parseInt(Math.random() * 6) + 1)
         setmyDice(makeRandom)
         setComDice(makeRandom)
+        setRound(round + 1)
     }
     /** 주사위 리셋 함수 */
     const resetDice = (e) => {
         setmyDice(1)
         setComDice(1)
+        setRound(1)
     }
+
+    useEffect(() => {
+        console.log(round)
+        if (round > 1) {
+            if (myDice > comDice) {
+                setResult('승리')
+            } else if (myDice < comDice) {
+                setResult('패배')
+            } else {
+                setResult('무승부')
+            }
+        }
+    }, [round])
 
   return ( 
     <div className='box'>
@@ -50,10 +71,12 @@ const Ex04 = () => {
             <Board res = {myDice} nick = "나" />
             <Board res = {comDice} nick = "컴퓨터"/>
         </div>
-        { myDice > comDice 
+        {/*useEffect 배우기 이전 작성 */}
+        {/* { myDice > comDice 
             ? <h4>승리</h4>
             : <h4>패배</h4>
-        }
+        } */}
+        <h2>{result}</h2>
     </div>
   )
 }

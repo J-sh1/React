@@ -15,6 +15,32 @@
         리액트 프로젝트가 일시적으로 파일을 인지하지 못함
     - 괄호 실수를 해서 제대로 파일이 안닫힌 경우
 
+4. React Hook "use~" cannot be called at the top level. React Hooks 
+must be called in a React Function Component or a custom React Hook Function
+    - 리액트 훅은 top level 에서 선언될 수 없고, 무조건 리액트 컴포넌트 내에서 선언
+    - 괄호로 인하여 Component 간의 분리가 일어났을 확률o
+
+5. 아무 오류도 없어 기능 화면이 사라짐
+    - return 문의 위치에 이상이 생긴 경우
+    - 내가 만든 함수의 괄호를 잘못써서 return 문이 그 함수안에 포함되어버린 경우
+
+6. Object is not iterable ~~ / Object are not valid as a React Child~
+    - props 처리할 때 ({속성1, 속성2}) 이런식으로 적어야 하는데 그냥 (속성1, 속성2) 이렇게 적은 경우
+    - {}, [] 등 괄호를 잘 못적은 경우
+
+7. ~. map is not a Function / .filter is not a Function
+    - map, filter 함수는 배열함수이므로 배열에다가만 쓸 수 있음
+    - 근데 앞에 적은 내용이 배열이 아닌 경우 나는 오류
+    - 배열에 오타가 난 경우
+    - 배열이 아닌데 내가 배열인줄 알고 쓴 경우
+
+8. 오류는 안나는데, 두번 눌러야 적절하게 실행이 되거나 내가 원하는 결과가 한템포 늦게 나오는 경우
+    - useEffect를 통해 실행되는 순서를 다시 설정
+
+9. Modules Not Found : Error : Can't resolve ~~~ in ~~~
+    - 모듈 설치 안한 경우
+    - 설치를 했는데 오타가 난 경우
+    - 설치를 했는데 덜 한 경우 => 재설치
 
 * 리액트 프로젝트를 주고바당야 한다면? or github 에 올라와잇는 프로젝트르 다운받았다면?
     - 리액트를 실행하기 위한 파일들은 node_modules 안에 존재, 엄청 무거움

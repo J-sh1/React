@@ -1,0 +1,42 @@
+.weather-container {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 100vh;
+  }
+  
+  .weather-item {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  
+    width: 60%;
+    height: 70%;
+    border-radius: 20px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    width: 100px;
+    height: 50px;
+    margin: 2px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+  }
+  
+  .weather-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .weather-data > h1 {
+    margin-top: 10px;
+    font-size: 5em;
+    font-weight: 900;
+  }
+  

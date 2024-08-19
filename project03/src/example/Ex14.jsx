@@ -13,15 +13,22 @@ export default class Ex14 extends Component {
         리액트 훅이 생겨나게 됨
     */
 
+    // 3. 화면이 렌더링 된 직후 실행
+    //  => API Call, 무거운 데이터, 타이머
+    //  사용자들은 조금이라도 화면이 먼저 뜨면 "빠르다"라고 느낌
+    //  그렇기 때문에 무거운 데이터들은 일부 화면을 띄운 후 가져오기
     componentDidMount(){
         console.log('3. componentDidMount')
     }
 
+    // 4. 갱신이 일어난 직후 실행
+    //  => state나 props의 값이 갱신 됐을 때(useRef는 포함X)
     componentDidUpdate(){
         console.log('4. componentDidUpdate')
     }
 
-    // 생성자
+    // 1. 생성자
+    // => state관리, 변수 선언, 화면을 구성하기 위한 초기 데이터 관리
     constructor(props){
         super(props)
         console.log('1.constructor')
@@ -44,6 +51,8 @@ export default class Ex14 extends Component {
         })
     }
 
+    // 2. render : 화면 구성하는 요소
+    //  render에 사용할 state나 함수는 생정아세 이미 만들어져 있어야한다.
   render() {
     console.log('2.render')
     return (

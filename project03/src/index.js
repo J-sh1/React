@@ -17,7 +17,6 @@ import './index.css';
 // 4. useState 최종실습 : 주사위 게임 (+bootstrap 사용법)
 // import App from './example/Ex04'
 
-
 // ============================= [STEP 2. 배열함수를 이용한 렌더링] =========================================
 
 // 5. map 함수, filter 함수
@@ -53,7 +52,24 @@ import './index.css';
 
 // ============================= [STEP 5. LifeCycle] =========================================
 // 14. React Class Component
-import App from './example/Ex14'
+// import App from './example/Ex14'
+
+// 15. Function Component. ver LifeCycle(useEffect)
+// import App from './example/Ex15'
+
+// 16. useEffect 실습 : 참참참 게임
+// import App from './example/Ex16'
+
+// 17. useEffect를 이용한 openAPI실습
+// import App from './example/Ex17'
+
+// 17. useEffect를 이용한 openAPI실습 (날씨)
+// import App from './example/Ex18'
+
+//======================================= 복습 ===================================================
+// import App from './example/Ex04_p'
+import App from './example/Ex10_p'
+
 
 import reportWebVitals from './reportWebVitals';
 
