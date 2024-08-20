@@ -7,11 +7,11 @@ const Ex10 = () => {
 
     // 할일들 목록 배열 
     const [todos, setTodos] = useState([{
-        'vlaue' : '물마시기',
+        'value' : '물마시기',
         'ck' : true
     },
     {
-        'vlaue' : '잠자기',
+        'value' : '잠자기',
         'ck' : false
     }])
 
