@@ -85,6 +85,5 @@ const Ex18 = () => {
 export default Ex18
 
 
-// 63f5644711f1af2664f25518ba5cdea1
 
-// https://api.openweathermap.org/data/2.5/weather?q=gwangju&appid=08ff855ec12eff8a1ca99e87cd89eff7
+
