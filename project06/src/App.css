@@ -1,0 +1,302 @@
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+*{
+    font-family: 'Noto Sans KR';
+}
+/* header 영역 */
+.header-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(110,0,0,0.9);
+}
+
+.header-box-logo{
+    width: 160px;
+    height: 95px;
+    flex:1;
+}
+
+.header-box-nav{
+    flex:1;
+}
+
+.header-box-nav-list{
+    list-style-type: none;
+    display: flex; 
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.header-box-nav-list > li {
+    color: white;
+    font-weight: bold;
+}
+
+.header-box-nav-list > li > a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    height: 95px;
+    line-height: 95px;
+}
+
+.header-box-util{
+    flex:1;
+}
+
+.header-box-util > button{
+    display: inline-block;
+    width: 100%;
+    height: 95px;
+    text-align: center;
+    line-height: 95px;
+    font-weight: bold;
+    color: white;
+    border: 0;
+    font-size: 16px;
+    background-color: rgb(0,0,0,0);
+}
+
+/* Main */
+.main-box{
+    height: 100vh;
+}
+.main-box-header{
+    background-image: url(https://cdn.bonif.co.kr/resources/web/css/images/brand/brand_v02.jpg);
+    background-position: 0 -150px;
+    background-repeat: no-repeat;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.main-box-header > h4,
+.main-box-header > p{
+    color:white;
+    text-align: center;
+    margin: 0;
+}
+
+.main-box-header > h4{
+    font-size: 22px;
+}
+
+.main-box-header > p{
+    font-size: 60px;
+}
+
+.main-box-summary{
+    text-align: center;
+    font-size: 22px;
+    box-sizing: border-box;
+    padding-top: 60px;
+}
+
+/* GoodsList */
+.goods-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin:10px
+}
+
+/* GoodsItem */
+.goods-item{
+    position: relative;
+}
+
+.goods-item-icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.goods-new{
+    background-color: #87af0f;
+    color: white;
+    font-size: 14px;
+    padding: 0 8px;
+    float: left;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.goods-best{
+    background-color: #962639;
+    color: white;
+    font-size: 14px;
+    padding: 0 8px;
+    float: left;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.goods-thumb > a > img{
+    width: 260px;
+}
+
+.goods-name > h4{
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.goods-name > p > span{
+    color:rgb(150,38,57)
+}
+
+/* GoodsDetail */
+.goods-detail-box{
+    display: flex;
+    justify-content: center;
+    gap:100px
+}
+
+.goods-detail-box-thumb,
+.goods-detail-box-info{
+    width: 556px;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+.goods-detail-title{
+    border-bottom: solid 2px #222;
+    padding-bottom: 22px;
+    position: relative;
+    min-height: 210px;
+    box-sizing: border-box;
+}
+
+.goods-icon::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.goods-detail-box-thumb > img{
+    width: 556px;
+    height: 556px;
+}
+.goods-detail-name{
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 57px;
+    margin-top: 5px;
+}
+.goods-detail-txt{
+    font-size: 18px;
+    color: #666;
+    margin-top: 7px;
+}
+
+.goods-detail-price-box{
+    font-size: 22px;
+    line-height: 1em;
+    padding-bottom: 5px;
+    padding-top: 25px;
+}
+
+.goods-detail-price-box > strong{
+    font-size: 34px;
+    font-weight: 700;
+    font-family: "Spoqa";
+    color: #962639;
+    letter-spacing: 0;
+}
+
+.goods-detail-summary{
+    color: #666;
+    font-size: 18px;
+    font-weight: 350;
+    padding-top: 24px;
+}
+
+/* 로그인 */
+.login-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-box-tit {
+    width: 560px;
+    border-bottom: solid 2px #962639;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.login-box-tit > h2{
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1em;
+    padding: 42px 0 30px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.login-box-form{
+    width: 560px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.login-box-form input[type="text"],
+.login-box-form input[type="password"]{
+    border: solid 1px #ccc;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    color: #666;
+    outline: none;
+}
+
+.login-box-form input[type="text"]:focus,
+.login-box-form input[type="password"]:focus{
+    border: solid 1px #6e0000;
+}
+
+.login-box-form > form > .input-block,
+.login-box-form > form > .submit{
+    margin-top: 20px;
+}
+
+.input-block > input,
+.submit > input {
+    width: 100%;
+}
+
+.login-btn{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    color: #fff;
+    border: solid 1px #6e0000;
+    background: #6e0000;
+    color: #fff;
+    line-height: 49px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding: 0 40px;
+}
+
+
+/* Footer */
+.footer-box{
+    background-color: #333337;
+    width: 100%;
+    height: 70px;
+    color:#8f8f91;
+    text-align: center;
+    line-height: 70px;
+    position: fixed;
+    bottom: 0;
+}

@@ -5,8 +5,10 @@ import Footer from './components/Footer';
 import Main from './pages/Main';
 import ProductList from './pages/ProductList';
 import ProductDetail from './pages/ProductDetail';
-import axios from 'axios'
+import axios from './axios'
 import { useEffect, useState } from 'react';
+import { useNavigate,Link } from 'react-router-dom'
+
 
 function App() {
 
@@ -26,30 +28,28 @@ function App() {
       - 상품의 타이틀 
       - 상품의 가격 
   */
-  let url = 'http://localhost:3000/bestList.json'
 
   const [list, setList] = useState([])
 
 
-
-  const getData = () => {
-    axios.get(url)
+  // 본인의 고유한 주소를 가지고 있는 데이터를 가져다 쓰겠다
+  // => axios로 요청
+  // => useEffect 를 사용
+  useEffect(()=> {
+    axios.get('/bestList.json')
     .then(res => {
-      console.log(res.data)
-      setList(res.data)
-      console.log(list)
+      console.log(res.data.list)
+      setList(res.data.list)
     })
-  }
-
-
+  }, [])
 
   return (
     <div className='container'>
         <Header/>
           <Routes>
             <Route path = '/' element = {<Main/>} />
-            <Route path = '/list' element = {<ProductList/>} list = {list}/>
-            <Route path = '/detail' element = {<ProductDetail/>} />
+            <Route path = '/list' element = {<ProductList  list = {list} />}/>
+            <Route path = '/detail/:no' element = {<ProductDetail list = {list}/>} />
           </Routes>
         <Footer/>
     </div>

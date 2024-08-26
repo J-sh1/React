@@ -49,6 +49,10 @@ must be called in a React Function Component or a custom React Hook Function
         => github에 올라와있는 파일은 노드모듈이 없는 상태
         => npm install을 하면 package.json 파일을 기반으로 없는 파일들을 설치해줌
 
+10. No routes matched location "/~"
+    - 현재 매치되는 route 주소가 없음
+    - Route를 작성하지 않은 경우
+    - Route path를 제대로 적지 않은 경우
 
 * 터미널 실행 관련
 1) 내가 여기다가 현재 명령어를 입력할 수 없는 상태다? 
