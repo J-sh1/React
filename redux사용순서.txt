@@ -1,0 +1,24 @@
+1. 설치
+    npm i redux react-redux
+
+2. index.js에 App을 Provider로 감싸주기
+    - context API와 비슷하지만 context APIsms Provider에 값을 전달 했다면, redux는 Provider에 store를 전달
+
+3. store 파일 생성
+    - createStore : 기존 Redux
+    - 매개변수 reducer
+
+4. reducer 파일 생성
+    - 함수, state/action 두개의 인자
+
+[Redux 사용]
+
+1. store에 딩록된 state 값에 접근하기 위한 함수 : useSelector
+    - 기존 Redux 사용법 : let 변수명 = useSelector(state => state.state명)
+
+2. state 변경에 대한 요청을 보내는 함수 : useDispatch
+    - dispatch(action)
+
+3. action : state를 변경하기 위한 명령
+    - type(필수)
+    - payload(선택)
