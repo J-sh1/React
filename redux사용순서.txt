@@ -22,3 +22,20 @@
 3. action : state를 변경하기 위한 명령
     - type(필수)
     - payload(선택)
+
+[toolkit 설치]
+
+1. npm install @reduxjs/toolkit
+
+2. store.js 파일 수정
+    - createStore => configuerStore
+
+3. reducer.js => 용도Slice.js
+    - createSlice 사용
+
+4. useDispatch 사용법
+    - dispatch(액션.함수이름())
+
+5. useSelector 사용법
+    - 기존 : useSelector(state => state.속성이름)
+    - toolkit : useSelector(state => state.reducer이름.속성이름)

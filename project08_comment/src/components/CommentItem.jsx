@@ -1,13 +1,14 @@
 import React from 'react'
 import { ListGroup } from 'react-bootstrap'
 
-const CommentItem = () => {
+const CommentItem = ({post}) => {
+  console.log(post)
   return (
     <div>
       <ListGroup.Item>
-            <b>대박</b>
+            <b>{post.post}</b>
             {"  "}|{"  "}
-            <span>작성자 : 김광주</span>
+            <span>작성자 : {post.writer}</span>
       </ListGroup.Item>
     </div>
   )

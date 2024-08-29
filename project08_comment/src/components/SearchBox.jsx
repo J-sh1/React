@@ -1,19 +1,31 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {Row, Col, Form, Button} from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
 
 const SearchBox = () => {
-  return (
-  <div>
-    <Row className="g-2">
-      <Col md>
-          <Form.Control type="text" placeholder="작성자 검색"  />
-      </Col>
-      <Col md>
-        <Button variant="primary">Search</Button>
-      </Col>
-    </Row>
-  </div>
-  )
+
+    const dispatch = useDispatch()
+    const searchRef = useRef()
+
+    const handleSearch = ()=>{
+        console.log('keyword', searchRef.current.value)
+        dispatch({
+            type : 'searchKeyword', 
+            payload : searchRef.current.value
+        })
+    }
+    return (
+        <div>
+            <Row className="g-2">
+                <Col md>
+                    <Form.Control type="text" placeholder="작성자 검색" ref={searchRef}/>
+                </Col>
+                <Col md>
+                    <Button variant="primary" onClick={handleSearch}>Search</Button>
+                </Col>
+            </Row>
+        </div>
+    )
 }
 
 export default SearchBox
