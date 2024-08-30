@@ -9,12 +9,14 @@ const CommentList = () => {
   const {post, keyword} = useSelector(state => state.post)
 
   const [resultList, setResultList] = useState([])
-
+  
+  console.log('post', post, 'keyword', keyword)
+  
   useEffect(() => {
     if (keyword == '') {
-      // setResultList(post)
+      setResultList(post)
     } else {
-      // setResultList(post.filter(item => item.writer.includes(keyword)))
+      setResultList(post.filter(item => item.writer.includes(keyword)))
     }
   }, [post, keyword])
 

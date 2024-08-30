@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import {Row, Col, Form, Button} from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
+import { posterActions } from '../redux/reducer/postSlice'
 
 const SearchBox = () => {
 
@@ -8,11 +9,13 @@ const SearchBox = () => {
     const searchRef = useRef()
 
     const handleSearch = ()=>{
-        console.log('keyword', searchRef.current.value)
-        dispatch({
-            type : 'searchKeyword', 
-            payload : searchRef.current.value
-        })
+        // console.log('keyword', searchRef.current.value)
+        // dispatch({
+        //     type : 'searchKeyword', 
+        //     payload : searchRef.current.value
+        // })
+
+        dispatch(posterActions.searchKeyword(searchRef.current.value))
     }
     return (
         <div>

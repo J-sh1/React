@@ -10,12 +10,12 @@ const postSlice = createSlice({
     initialState,
     reducers : {
         addpost(state, action){
-            console.log('add',state, action.payload)
-            state.post.push(action.payload)
-            console.log(state.post)
+            // console.log('add',state, action.payload)
+            state.post = [...state.post, action.payload]
+            // console.log(state.post)
         },
         searchKeyword(state, action){
-
+            state.keyword = action.payload
         }
     }
 })
