@@ -13,7 +13,7 @@ useEffect(() => {
 
   return (
     <div className='todo-list'>
-        <p>해야할 일 : 0개</p>
+        <p>해야할 일 : {todos?.length}개</p>
         <ul className='todo-list-ul'>
             {todos.map(item => 
                 <TodoItem key={item.id} item = {item}/>

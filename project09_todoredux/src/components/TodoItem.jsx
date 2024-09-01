@@ -9,8 +9,10 @@ const TodoItem = ({item}) => {
         ?   <FaCheckCircle style={{color : 'green'}}/>
         : <FaRegCircle style={{color : 'lightgray'}}/>
         }
+        
+        
         {/* <FaCheckCircle style={{color : 'green'}}/> */}
-        <FaRegCircle style={{color : 'lightgray'}}/>
+        {/* <FaRegCircle style={{color : 'lightgray'}}/> */}
 
         {/* 할일 기본 - 할일 완료 - 할일 수정을 구분하는 태그들 */}
         {/* <input type="text" name="" id="" className='todo-item-edit-input'/> */}
