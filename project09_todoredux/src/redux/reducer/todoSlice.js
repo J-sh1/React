@@ -14,9 +14,31 @@ export const todoSlice = createSlice({
         */
        addTodo(state, action){
         // console.log('action', action, 'state', state)
-        state.todos = [...state.todos, action.payload]
+        state.todos.push(action.payload)
         // console.log(state.todos)
+       },
+       checkChangeTodo(state, action){
+        // console.log('state', state.todos)
+        // console.log('action', action)
+        const checkedTodo = state.todos.find(item => item.id == action.payload.id)
+        if (checkedTodo){
+            checkedTodo.complete = !checkedTodo.complete
+        }
+        // state.todos.map(item => item.id == action.payload)
+
+       },
+       textChangeTodo(state, action){
+        const updateTodo = state.todos.find(item => item.id == action.payload.id)
+        if(updateTodo){
+            updateTodo.text = action.payload.text
+        }
+       },
+       deleteTodo(state, action){
+        // console.log('삭제')
+        state.todos = state.todos.filter(item => item.id !== action.payload.id)
        }
+
+
     }
 })
 export const TodoActions = todoSlice.actions
