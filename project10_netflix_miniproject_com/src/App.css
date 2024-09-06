@@ -119,3 +119,9 @@ body{
     padding: 15px;
     margin-top: 20px;
 }
+
+.movie-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

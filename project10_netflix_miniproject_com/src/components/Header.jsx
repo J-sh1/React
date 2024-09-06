@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navbar, Nav, Form, Button, Container, NavDropdown } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -20,8 +21,16 @@ const Header = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="#action2">Movies</Nav.Link>
+
+              {/*
+              Nav.Link는 안에 a태그가 포함
+                -> a태그는 새로운 페이지로 '이동' -> 다른페이지
+                근데 React는 Single Page Application
+                그래서 Nav.Link나 a태그 대신 Link 태그
+               */}
+
+              <Link to="/" className="nav-link">Home</Link>
+              <Link to="/movies" className="nav-link">Movies</Link>
             
             </Nav>
             <Form className="d-flex">
