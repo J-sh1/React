@@ -35,7 +35,7 @@ const Movies = () => {
                                             정렬 방식을 선택 해주세요.
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu>
-                                            <Dropdown.Item href="#/action-1">제목 오름차순</Dropdown.Item>
+                                            <Dropdown.Item href="#">제목 오름차순</Dropdown.Item>
                                             <Dropdown.Item href="#/action-1">제목 내림차순</Dropdown.Item>
                                             <Dropdown.Item href="#/action-1">평점 오름차순</Dropdown.Item>
                                             <Dropdown.Item href="#/action-1">평점 내림차순</Dropdown.Item>
