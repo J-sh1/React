@@ -7,41 +7,54 @@ const Movies = () => {
     const {popularMovies} = useSelector(state => state.movie)
     const [filter, setFilter] = useState([])
 
-    const res = (e) => {
-        if (e == 'strup') {
+    /*
+    자바스크립트 sort함수
+    - 기본적으로 유니코드를 기반으로 정렬기준을 판단
+    - compare함수를 직접 구현하여 정렬
+    배열명.sort((a, b => {
+        return a - b // 오름차순
+    }))
+
+    반환값 < 0 : a가 b보다 앞으로 이동
+    반환값 == 0 : 순서변동 x
+    반환값 > 0 : b가 a보다 앞으로 이동
+    */
+
+    const res = (categori) => {
+        if (categori == 'strup') {
             setFilter(
-                [...popularMovies].sort((a, b) => {     
+                [...filter].sort((a, b) => {     
                     return a.title.localeCompare(b.title);
                 })
             )
-        } else if (e == 'strdown') {
+        } else if (categori == 'strdown') {
             setFilter(
-                [...popularMovies].sort((a, b) => {     
+                [...filter].sort((a, b) => {     
                     return b.title.localeCompare(a.title);
                 })
             )
-        } else if (e == 'ratingup') {
+        } else if (categori == 'ratingup') {
             setFilter(
-                [...popularMovies].sort((a, b) => {     
+                [...filter].sort((a, b) => {     
                     return b.vote_average - a.vote_average;
                 })
             )
-        } else if (e == 'ratingdown') {
+        } else if (categori == 'ratingdown') {
             setFilter(
-                [...popularMovies].sort((a, b) => {     
+                [...filter].sort((a, b) => {     
                     return a.vote_average - b.vote_average;
                 })
             )
-        } else if (e == 'popularup') {
+        } else if (categori == 'popularup') {
             setFilter(
-                [...popularMovies].sort((a, b) => {     
-                    return a.popularity - b.popularity;
+                [...filter].sort((a, b) => {     
+                    return b.popularity - a.popularity;
                 })
             )
-        } else if (e == 'populardown') {
+        } else if (categori == 'populardown') {
             setFilter(
-                [...popularMovies].sort((a, b) => {     
-                    return b.popularity - a.popularity;
+                [...filter].sort((a, b) => {     
+                    return a.popularity - b.popularity;
                 })
             )
         }
@@ -52,7 +65,6 @@ const Movies = () => {
         if(popularMovies.length !== 0){
             setFilter(popularMovies)
         }
-        
     }, [])
 
   return (
