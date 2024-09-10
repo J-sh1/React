@@ -1,0 +1,10 @@
+1. cd backend
+2.
+    npm init -y
+    npm i express mysql2
+3. backend 폴더 - server.js 생성 
+
+
+
+cd front 
+npm run build
