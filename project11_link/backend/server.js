@@ -33,6 +33,25 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended : false}))
 
+// 세션 설정
+const session = require('express-session')
+const fileStore = require('session-file-store')(session)
+
+let fileStoreOptions = {
+    path :'./sessions', // 세션 파일 저장 경로
+    reapInterval : 10, // 세션 정리 주기(10초)
+}
+
+// 세션 미들웨어 설정
+app.use(session({
+    httpOnly : true, // http를 통해서만 세션에 접근
+    resave : false, // 세션을 항상 재저장하지 않도록
+    secret : 'test', // 세션암호화
+    saveUninitialized : false, // 초기화 되지 않은 세션은 저장하지 않도록
+    store : new fileStore(fileStoreOptions),
+    cookie : {maxAge : 30000} // 쿠키의 유효기간 30초 
+}))
+
 app.use('/', indexRouter)
 
 app.set('port', process.env.PORT || 3001)

@@ -12,3 +12,13 @@ HTTP 에러코드
 4. 500 (Internal Server Error) : 서버에서 처리하는 동안 오류가 생김
     - 서버에서 나는 오류
     - node 터미널 콘솔창 확인할 것  
+
+==============================
+Session 처리 방법 
+1) server session => express-session, session-file-store
+    -> 장점 : 보안 
+    -> 단점 : 사용 변수 O 
+
+2) browser session => sessionStorage 
+    -> 장점 : 사용 쉬움 
+    -> 단점 : 보안 
