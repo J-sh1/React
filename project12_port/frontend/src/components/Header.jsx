@@ -6,6 +6,15 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom'
 
 const Header = () => {
+
+  console.log('세션', JSON.parse(sessionStorage.getItem('info')))
+
+  const logout = () => {
+    console.log('로그아웃 ')
+    sessionStorage.removeItem('info')
+    window.location.href = '/'
+  }
+
   return (
     <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#B3E5FC" }}>
     <Container>
@@ -23,8 +32,14 @@ const Header = () => {
           </NavDropdown>
         </Nav>
         <Nav>
-        <Link to="/join" className="nav-link">회원가입</Link>
-        <Link to="/login" className="nav-link">로그인</Link>
+        {JSON.parse(sessionStorage.getItem('info'))
+        ?<button onClick={logout}>로그아웃</button>
+        :
+        <>
+          <Link to="/join" className="nav-link">회원가입</Link>
+          <Link to="/login" className="nav-link">로그인</Link>
+        </>
+        }
         </Nav>
       </Navbar.Collapse>
     </Container>
